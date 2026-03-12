@@ -9,4 +9,4 @@ namespace matrix::io {
         throw matrix::core::ParseError("MatrixInput::read is not implemented yet");
     }
 
-} // namespace matrix::io
+}

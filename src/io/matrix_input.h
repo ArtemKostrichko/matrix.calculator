@@ -11,4 +11,4 @@ namespace matrix::io {
         [[nodiscard]] matrix::core::Matrix read(std::istream& in) const;
     };
 
-} // namespace matrix::io
+}

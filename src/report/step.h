@@ -15,4 +15,4 @@ namespace matrix::report {
         [[nodiscard]] virtual matrix::util::Value run(const matrix::core::Matrix& matrix) const = 0;
     };
 
-} // namespace matrix::report
+}
