@@ -15,3 +15,10 @@ if(MATRIX_ENABLE_WARNINGS)
         add_compile_options(/W4)
     endif()
 endif()
+
+add_library(matrix_io
+        src/io/matrix_input.cpp
+)
+
+target_include_directories(matrix_io PUBLIC src)
+target_compile_features(matrix_io PUBLIC cxx_std_23)
