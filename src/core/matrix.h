@@ -7,6 +7,11 @@
 namespace matrix::core {
 
     class Matrix {
+    private:
+        int rows_ = 0;
+        int cols_ = 0;
+        std::vector<double> data_;
+        [[nodiscard]] int index(int r, int c) const;
     public:
         Matrix() = default;
         Matrix(int rows, int cols);
@@ -27,12 +32,6 @@ namespace matrix::core {
 
         [[nodiscard]] const std::vector<double>& raw() const noexcept;
 
-    private:
-        int rows_ = 0;
-        int cols_ = 0;
-        std::vector<double> data_;
-
-        [[nodiscard]] int index(int r, int c) const;
     };
 
 }
