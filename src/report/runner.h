@@ -1,19 +1,19 @@
 #pragma once
 
 #include <memory>
+#include <ostream>
 #include <vector>
 
 #include "core/matrix.h"
 #include "report/step.h"
 
-namespace matrix::report {
+namespace report {
 
     class StepRunner {
     public:
-        StepRunner() = default;
-
         void addStep(std::unique_ptr<Step> step);
-        void run(const matrix::core::Matrix& matrix) const;
+
+        void run(const core::Matrix& matrix, std::ostream& output) const;
 
     private:
         std::vector<std::unique_ptr<Step>> steps_;
